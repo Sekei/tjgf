@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="48dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_rect_17_topright_buttomright"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@color/color_77778A"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/my_user_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_img"
+            app:riv_border_color="@color/colorWhite"
+            app:riv_border_width="5dp"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_17_EAEAEA"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="hhhh" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_1_23232A"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="25dp" />
+</LinearLayout>

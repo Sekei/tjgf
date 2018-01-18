@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/app_theme_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/news_btn_top"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/newslist_btn"
+                style="@style/button_15_checkbox"
+                android:background="@drawable/btn_rect_5_topleft_buttomleft"
+                android:text="消息" />
+
+            <Button
+                android:id="@+id/fistfriend_btn"
+                style="@style/button_15_checkbox"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/btn_rect_5_topright_buttomright"
+                android:text="拳友"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/news_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

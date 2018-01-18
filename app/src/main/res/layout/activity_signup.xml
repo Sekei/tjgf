@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_32323C"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="54dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:background="@drawable/tjgf_bg" />
+
+            <TextView
+                style="@style/text_20_FFFFFF"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="20dp"
+                android:text="李会斌太极体验课" />
+
+            <TextView
+                style="@style/text_14_FFFFFF"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="8dp"
+                android:text="李会斌-陈式太极拳十三代传承人" />
+
+            <TextView
+                style="@style/text_27_FA5251"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="8dp"
+                android:text="￥50" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_bg"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_15_EAEAEA"
+                    android:layout_weight="1"
+                    android:text="5/10人" />
+
+                <TextView
+                    style="@style/text_15_EAEAEA"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="60分钟" />
+
+                <TextView
+                    style="@style/text_15_EAEAEA"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="2017-12-11  15:00" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_bg"
+                android:layerType="software" />
+
+            <TextView
+                style="@style/text_15_EAEAEA"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/icon_address"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="建辉武校-上海市浦东新区桃林路777号" />
+
+            <View style="@style/line_10_24242D" />
+
+            <TextView
+                style="@style/text_17_EAEAEA"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="20dp"
+                android:text="简介" />
+
+            <TextView
+                style="@style/text_16_8A8A93"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="8dp"
+                android:text="李会斌，河北省石家庄市藁城区人九门乡南屯村人，出生于1976年，自幼习练武术，曾习练散打，武术器械等，擅长兵器，九节鞭，流星锤，单刀，剑，苗刀等，2013年得遇国际太极拳大师陈式太极拳十一代传人马虹先生得意弟子刘建辉名师，逐跟随学习陈式太极拳，并拜入门下，尽得真传，学得陈氏太极拳老架一路83式，二路炮锤，陈式太极单刀，陈氏太极剑，陈氏春秋大刀，推手技法等。" />
+
+            <View
+                style="@style/line_10_24242D"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_17_EAEAEA"
+                    android:layout_gravity="center_vertical"
+                    android:text="报名用户" />
+
+                <com.ms.tjgf.widget.PileLayout
+                    android:id="@+id/pile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    app:PileLayout_pileWidth="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.ms.tjgf.mvp.friendinfo.utils.CompatToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/include_black_head" />
+    </com.ms.tjgf.mvp.friendinfo.utils.CompatToolbar>
+
+    <Button
+        android:id="@+id/signup_btn"
+        style="@style/button_17_app_theme_bg"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:text="报名" />
+</RelativeLayout>

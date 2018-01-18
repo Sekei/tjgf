@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTheme">#FF4081</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="cc_light">#10000000</color>
+    <color name="cc_dark_fade">#33000000</color>
+    <color name="color_EAEAEA">#EAEAEA</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_32323C">#32323C</color>
+    <color name="color_171717">#171717</color>
+    <!--标签线-->
+    <color name="color_F95251">#F95251</color>
+    <color name="color_23232A">#23232A</color>
+    <color name="color_F04354">#F04354</color>
+    <color name="color_41414F">#41414F</color>
+    <color name="color_77778A">#77778A</color>
+    <color name="color_0000">#00000000</color>
+    <color name="color_696969">#696969</color>
+    <color name="color_A6171717">#A6171717</color>
+    <color name="color_80000000">#80000000</color>
+    <color name="color_939393">#939393</color>
+    <color name="color_434351">#434351</color>
+    <color name="color_24242D">#24242D</color>
+    <color name="color_FA5251">#FA5251</color>
+    <color name="color_3C3C47">#3C3C47</color>
+    <color name="color_8A8A93">#8A8A93</color>
+    <color name="color_F95050">#F95050</color>
+    <color name="color_000">#000</color>
+    <color name="color_292932">#292932</color>
+</resources>

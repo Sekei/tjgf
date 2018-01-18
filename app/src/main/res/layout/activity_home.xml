@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_button"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_41414F"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button_home"
+            style="@style/RadioGroupButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableTop="@drawable/home_btn_curriculum_selector"
+            android:text="课程" />
+
+        <RadioButton
+            android:id="@+id/radio_button_discovery"
+            style="@style/RadioGroupButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/home_btn_tjcircle_selector"
+            android:text="太极圈" />
+
+        <RadioButton
+            android:id="@+id/radio_button_attention"
+            style="@style/RadioGroupButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/home_btn_news_selector"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/radio_button_profile"
+            style="@style/RadioGroupButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/home_btn_my_selector"
+            android:text="我的" />
+    </RadioGroup>
+
+</LinearLayout>

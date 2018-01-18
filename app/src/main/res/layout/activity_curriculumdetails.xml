@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_32323C"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:background="@drawable/tjgf_bg" />
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/details_xtablayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:xTabDividerWidthWidthText="true"
+                app:xTabIndicatorColor="@color/color_F95050"
+                app:xTabIndicatorHeight="3dp"
+                app:xTabMode="fixed"
+                app:xTabDividerWidth="2dp"
+                app:xTabDividerHeight="12dp"
+                app:xTabDividerColor="@color/color_292932"
+                app:xTabDividerGravity="center"
+                app:xTabSelectedTextColor="@color/color_F95050"
+                app:xTabSelectedTextSize="15sp"
+                app:xTabTextColor="@color/color_888888"
+                app:xTabTextSize="15sp" />
+
+            <View
+                style="@style/line_10_24242D"
+                android:layout_height="1dp" />
+
+            <com.ms.tjgf.widget.CustomViewPager
+                android:id="@+id/details_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.ms.tjgf.mvp.friendinfo.utils.CompatToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/include_black_head" />
+    </com.ms.tjgf.mvp.friendinfo.utils.CompatToolbar>
+
+</RelativeLayout>

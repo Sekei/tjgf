@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/my_user_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/user_img"
+        app:riv_border_color="@color/colorWhite"
+        app:riv_border_width="5dp"
+        app:riv_oval="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多隆" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="10分钟前"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="只要想起他乡的人，梅花便落满了南山”。 又一个年关，日子被黑夜夹杂的寒风卷着走，千家万户点着白色的、橘色的灯，你的脸在寒夜里变得干净而亲切，" />
+
+        <com.donkingliang.labels.LabelsView
+            android:id="@+id/dynamic_labels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:labelBackground="@drawable/label_bg"
+            app:labelTextColor="@color/colorPrimaryDark"
+            app:labelTextPaddingBottom="5dp"
+            app:labelTextPaddingLeft="10dp"
+            app:labelTextPaddingRight="10dp"
+            app:labelTextPaddingTop="5dp"
+            app:labelTextSize="10sp"
+            app:lineMargin="10dp"
+            app:maxSelect="5"
+            app:selectType="SINGLE"
+            app:wordMargin="10dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_black_head" />
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" />
+
+    <RadioGroup
+        android:id="@+id/map_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/color_32323C"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/map_radio_pe"
+            style="@style/MapRadioGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/location01"
+            android:text="私教" />
+
+        <RadioButton
+            android:id="@+id/map_radio_square"
+            style="@style/MapRadioGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/location02"
+            android:text="广场" />
+
+        <RadioButton
+            android:id="@+id/map_radio_master"
+            style="@style/MapRadioGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/location03"
+            android:text="大师课" />
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_32323C"
+    android:orientation="vertical">
+
+
+    <TextView
+        style="@style/text_FFFFFF"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="20dp"
+        android:text="24式简化太极拳"
+        android:textSize="18sp" />
+
+    <TextView
+        style="@style/text_939393"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="8dp"
+        android:text="讲解： 王天琦" />
+
+
+    <View
+        style="@style/line_10_24242D"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp" />
+
+
+    <TextView
+        style="@style/text_16_939393"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:text="24式简化太极拳也叫简化太极拳，是国家体委（现为国家体育总局）于1956年组织太极拳专家汲取杨氏太极拳之精华编串而成带24个…   " />
+
+
+    <View style="@style/line_10_24242D" />
+
+    <TextView
+        style="@style/text_15_EAEAEA"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="15dp"
+        android:text="学习进度" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="60"
+            android:progressDrawable="@drawable/progressbar" />
+
+        <TextView
+            style="@style/text_EAEAEA"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="18dp"
+            android:text="60%"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/line_10_24242D"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="49dp"
+            android:background="@drawable/tjgf_bg" />
+
+        <TextView
+            style="@style/text_EAEAEA"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:text="第三式 - 白鹤亮翅"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

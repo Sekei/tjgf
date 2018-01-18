@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/my_user_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/user_img"
+        app:riv_border_color="@color/colorWhite"
+        app:riv_border_width="5dp"
+        app:riv_oval="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_15_EAEAEA"
+                android:text="多隆" />
+
+            <TextView
+                style="@style/text_12_939393"
+                android:layout_marginTop="5dp"
+                android:text="10分钟前" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/text_939393"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="只要想起他乡的人，梅花便落满了南山”。 又一个年关，日子被黑夜夹杂的寒风卷着走，千家万户点着白色的、橘色的灯，你的脸在寒夜里变得干净而亲切，"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

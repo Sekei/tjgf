@@ -1,0 +1,210 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>//无标题
+        <item name="windowActionBar">false</item>//无ActionBar
+    </style>
+    <!--自定义底部tab-->
+    <style name="RadioGroupButtonStyle">
+        <!-- 这个属性是去掉button 默认样式-->
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/home_text_color_selector</item>
+    </style>
+
+    <style name="MapRadioGroupStyle">
+        <!-- 这个属性是去掉button 默认样式-->
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <!--button定义-->
+    <style name="button_17_app_theme_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:background">@drawable/app_theme_bg</item>
+    </style>
+    <!--textview定义-->
+    <style name="text_12_888888">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_888888</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_20_FFFFFF">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="text_12_696969">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_696969</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_15_EAEAEA">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_EAEAEA</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="text_16_EAEAEA">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_EAEAEA</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_17_EAEAEA">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_EAEAEA</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="text_EAEAEA">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_EAEAEA</item>
+    </style>
+    <style name="text_16_8A8A93">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_8A8A93</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_17_F95251">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_F95251</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="text_14_FFFFFF">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_14_000000">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_939393">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_939393</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_14_969696">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_696969</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_11_8000">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_80000000</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="text_11_939393">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_939393</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="text_12_939393">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_939393</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_16_939393">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_939393</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_15_FFFFFF">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text_FFFFFF">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="imageview_wrap_content_center">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="button_15_checkbox">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textColor">@color/news_top_button_color_selector</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="text_27_FA5251">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_FA5251</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="line_1_23232A">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_23232A</item>
+    </style>
+
+    <style name="line_1_3C3C47">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@drawable/line_bg</item>
+    </style>
+
+    <style name="line_10_24242D">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/color_24242D</item>
+    </style>
+
+    <style name="line_123232A">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/color_23232A</item>
+    </style>
+</resources>
