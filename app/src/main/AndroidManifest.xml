@@ -61,8 +61,7 @@
             android:label="课程报名" />
         <activity
             android:name=".mvp.curriculumdetails.CurriculumDetailsActivity"
-            android:label="课程学习进度"
-            android:windowSoftInputMode="adjustPan" />
+            android:label="课程学习进度" />
         <activity
             android:name=".mvp.curriculumdetails.CurriculumPlayActivity"
             android:label="课程播放" />

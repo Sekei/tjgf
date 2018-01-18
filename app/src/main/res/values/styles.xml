@@ -31,6 +31,15 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+
+    <!--自定义五角星评论-->
+    <style name="RadingStyle" parent="@android:style/Widget.RatingBar">
+        <!-- 定义星星图片 -->
+        <item name="android:progressDrawable">@drawable/layer_live_rating_bar</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:maxHeight">25dp</item>
+    </style>
+
     <!--button定义-->
     <style name="button_17_app_theme_bg">
         <item name="android:layout_width">match_parent</item>
