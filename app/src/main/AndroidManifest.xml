@@ -60,9 +60,12 @@
             android:name=".mvp.curriculumdetails.SignUpActivity"
             android:label="课程报名" />
         <activity
-            android:windowSoftInputMode="adjustPan"
             android:name=".mvp.curriculumdetails.CurriculumDetailsActivity"
-            android:label="课程学习进度" />
+            android:label="课程学习进度"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".mvp.curriculumdetails.CurriculumPlayActivity"
+            android:label="课程播放" />
 
     </application>
 

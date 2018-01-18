@@ -73,25 +73,13 @@
         style="@style/line_10_24242D"
         android:layout_marginTop="15dp" />
 
-    <LinearLayout
+    <com.ms.tjgf.widget.CustomListView
+        android:id="@+id/coursedetails_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
         android:layout_marginRight="14dp"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="74dp"
-            android:layout_height="49dp"
-            android:background="@drawable/tjgf_bg" />
-
-        <TextView
-            style="@style/text_EAEAEA"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="14dp"
-            android:text="第三式 - 白鹤亮翅"
-            android:textSize="15sp" />
-    </LinearLayout>
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
 
 </LinearLayout>
