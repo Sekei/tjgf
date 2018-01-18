@@ -81,11 +81,13 @@
         <item name="android:textColor">@color/color_EAEAEA</item>
         <item name="android:textSize">17sp</item>
     </style>
+
     <style name="text_EAEAEA">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_EAEAEA</item>
     </style>
+
     <style name="text_16_8A8A93">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -106,18 +108,21 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="text_14_000000">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_000</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="text_939393">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_939393</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="text_14_969696">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -159,11 +164,13 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">15sp</item>
     </style>
+
     <style name="text_FFFFFF">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+
     <style name="imageview_wrap_content_center">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -175,6 +182,14 @@
         <item name="android:layout_height">30dp</item>
         <item name="android:textColor">@color/news_top_button_color_selector</item>
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="edittext_4E4E4E">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_rect_4_24242d</item>
+        <item name="android:textColorHint">@color/color_4E4E4E</item>
+        <item name="android:textColor">@color/color_4E4E4E</item>
     </style>
 
     <style name="text_27_FA5251">
