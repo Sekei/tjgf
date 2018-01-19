@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_32323C"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_black_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head_top_color"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="54dp"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/tjgf_bg" />
+
+            <TextView
+                style="@style/text_EAEAEA"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="17dp"
+                android:lineSpacingExtra="5dp"
+                android:text="太极功夫丁酉杯太极擂台赛\n上海赛区一季度赛"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/line_bg"
+                android:layerType="software" />
+
+            <TextView
+                style="@style/text_EAEAEA"
+                android:layout_margin="17dp"
+                android:lineSpacingExtra="15dp"
+                android:text="比赛时间：  2017-12-25\n比赛地点：  上海市源深体育馆\n主办单位：  上海门申网络科技公司"
+                android:textSize="14sp" />
+
+            <View
+                style="@style/line_1_23232A"
+                android:layout_height="15dp" />
+
+            <TextView
+                style="@style/text_EAEAEA"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="17dp"
+                android:text="赛事介绍"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/text_8A8A93"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="7dp"
+                android:lineSpacingExtra="5dp"
+                android:text="2月10号-11号在北京国家体育局武术运动管理中心、中国武术协会训练馆举办了2017年中国武术段位制（七段）考试，全国通过资格审查62人，48人以优异的成绩成功晋级。
+这次考试分为段位制套路单练、自选器械、拳术、理论和答辩四项考试，四项成绩相加总分合格后，通过本次国家级考试获得中国武术七段。"
+                android:textSize="16sp" />
+
+            <View
+                style="@style/line_25252E"
+                android:layout_height="1dp"
+                android:layout_margin="17dp" />
+
+            <EditText
+                style="@style/edittext_23232A"
+                android:layout_height="35dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:hint="发表评论"
+                android:paddingLeft="15dp"
+                android:textColorHint="@color/color_6D6D77"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_EAEAEA"
+                    android:layout_weight="1"
+                    android:text="评论"
+                    android:textSize="17sp" />
+
+                <TextView
+                    style="@style/text_8A8A93"
+                    android:layout_gravity="center_vertical"
+                    android:text="更多"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_23232A"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/icon_master_collection" />
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:background="@color/color_32323C" />
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/icon_master_fabulous" />
+
+        <Button
+            android:id="@+id/signup_btn"
+            style="@style/button_17_app_theme_bg"
+            android:layout_height="54dp"
+            android:text="报名" />
+    </LinearLayout>
+</RelativeLayout>
