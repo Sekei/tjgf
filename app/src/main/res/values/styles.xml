@@ -97,6 +97,12 @@
         <item name="android:textColor">@color/color_EAEAEA</item>
     </style>
 
+    <style name="text_858585">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_858585</item>
+    </style>
+
     <style name="text_16_8A8A93">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

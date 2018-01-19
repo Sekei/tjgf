@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentRight="true"
+    android:background="@drawable/btn_rect_22_434351"
     android:orientation="vertical">
 
     <ListView
         android:id="@+id/listview"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_rect_43_434351"
         android:cacheColorHint="#00000000"
+        android:divider="@null"
         android:scrollbars="none" />
 </LinearLayout>

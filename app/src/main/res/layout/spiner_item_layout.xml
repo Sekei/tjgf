@@ -8,9 +8,8 @@
         android:id="@+id/tv_name"
         style="@style/text_EAEAEA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="fdsfdsfdsf"
+        android:layout_height="30dp"
+        android:layout_marginLeft="21dp"
         android:textSize="14sp" />
 
 </LinearLayout>
