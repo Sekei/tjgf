@@ -20,13 +20,23 @@ public class HomeActivity extends AppActionBarActivity implements RadioGroup.OnC
     private Fragment[] mFragmensts = new Fragment[4];
     private RadioButton mRadioButtonHome;
     private Fragment mFragment = null;
+    //标记那个是否被选中，修改状态栏色彩
+    private int mPosition = 0;
+
+    @Override
+    protected int getStatusBarTintResource() {
+        if (mPosition == 0 || mPosition == 2) {
+            return R.drawable.app_theme_bg;
+        }
+        return R.color.color_171717;
+    }
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_home;
     }
 
-     protected void initView() {
+    protected void initView() {
         mFragmensts[0] = new CurriculumFragment();//课程
         mFragmensts[1] = new TJCircleFragment();//太极圈
         mFragmensts[2] = new NewsFragment();//消息
@@ -42,19 +52,25 @@ public class HomeActivity extends AppActionBarActivity implements RadioGroup.OnC
     public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
         switch (checkedId) {
             case R.id.radio_button_home:
+                mPosition = 0;
                 mFragment = mFragmensts[0];
                 break;
             case R.id.radio_button_discovery:
+                mPosition = 1;
                 mFragment = mFragmensts[1];
                 break;
             case R.id.radio_button_attention:
+                mPosition = 2;
                 mFragment = mFragmensts[2];
                 break;
             case R.id.radio_button_profile:
+                mPosition = 3;
                 mFragment = mFragmensts[3];
                 break;
         }
         if (mFragmensts != null) {
+            //重新修改状态栏颜色
+            applyKitKatTranslucency();
             getSupportFragmentManager().beginTransaction().replace(R.id.home_container, mFragment).commit();
         }
     }

@@ -7,6 +7,7 @@ import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseAdapterHelper;
 import com.ms.tjgf.base.QuickAdapter;
 import com.ms.tjgf.mvp.tjcircle.dynamic.bean.DynamicBean;
+import com.ms.tjgf.widget.NineGridTestLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,18 +24,20 @@ public class DynamicAdapter extends QuickAdapter<DynamicBean> {
 
     @Override
     protected void convert(BaseAdapterHelper helper, final DynamicBean item) {
-//        helper.setText(R.id.userName, item.getUserName());
-//        helper.setText(R.id.prizeTime, item.getPrizeTime());
-//        ImageView userImg = helper.getView(R.id.user_img);
-//        GlideImageUtils.with(context, AppPublicUtil.getUserUrl(item.getUserId()), userImg, true);
+        ArrayList<String> listUrl = new ArrayList<>();
+        listUrl.add("http://img2.imgtn.bdimg.com/it/u=1006187901,4223500905&fm=27&gp=0.jpg");
+        listUrl.add("http://img1.imgtn.bdimg.com/it/u=695237186,1353057623&fm=27&gp=0.jpg");
+        listUrl.add("http://img3.imgtn.bdimg.com/it/u=1023551729,972800410&fm=27&gp=0.jpg");
+        listUrl.add("http://img3.imgtn.bdimg.com/it/u=1023551729,972800410&fm=27&gp=0.jpg");
+        ((NineGridTestLayout) helper.getView(R.id.layout_nine_grid)).setUrlList(listUrl);
         //标签加载
-        LabelsView labelsView=helper.getView(R.id.dynamic_labels);
+        LabelsView labelsView = helper.getView(R.id.dynamic_labels);
         ArrayList<String> label = new ArrayList<>();
-        label.add("前端");
-        label.add("后台");
-        label.add("微信开发");
-        label.add("游戏开发");
+        label.add("太极拳");
+        label.add("上海");
+        label.add("冬天");
         labelsView.setLabels(label);
+
     }
 
 }
