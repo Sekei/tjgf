@@ -19,7 +19,6 @@ import com.bumptech.glide.Glide;
 import com.ms.tjgf.R;
 import com.ms.tjgf.application.MyApplication;
 import com.ms.tjgf.base.ActionBarActivity;
-import com.ms.tjgf.mvp.curriculum.fragment.StudyFragment;
 import com.ms.tjgf.mvp.curriculumdetails.fragment.CommentFragment;
 import com.ms.tjgf.mvp.curriculumdetails.fragment.CourseDetailsFragment;
 import com.ms.tjgf.utils.ToastUtils;

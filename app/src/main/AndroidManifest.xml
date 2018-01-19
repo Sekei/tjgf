@@ -65,7 +65,9 @@
         <activity
             android:name=".mvp.curriculumdetails.CurriculumPlayActivity"
             android:label="课程播放" />
-
+        <activity
+            android:name=".mvp.curriculum.master.activity.MasterCurriculumActivity"
+            android:label="大师课" />
     </application>
 
 </manifest>
