@@ -1,5 +1,7 @@
 package com.ms.tjgf.network;
 
+import com.ms.tjgf.network.bean.ProvincesBean;
+
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -13,6 +15,6 @@ public interface IHttp {
     @FormUrlEncoded
     rx.Observable<RespBean> login(@Field("username") String username,@Field("password")String pwd);
 
-    @POST("/v1/area/provinces")
-    rx.Observable<RespBean> getAreaProvince();
+    @POST("/v1/area/provinces/")
+    rx.Observable<ProvincesBean> getAreaProvince();
 }

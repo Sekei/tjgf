@@ -8,10 +8,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.ActionBarActivity;
 import com.ms.tjgf.network.RfResultHandler;
+import com.ms.tjgf.network.bean.ProvincesBean;
 import com.ms.tjgf.network.bean.RetrofitHttp;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,7 +89,7 @@ public class LoginActivity extends ActionBarActivity {
                 .subscribe(login ->{
                     System.out.println(login);
                 },throwable -> {
-                    System.out.println(throwable.toString());
+                    throwable.printStackTrace();
                 });
     }
 
@@ -94,9 +98,12 @@ public class LoginActivity extends ActionBarActivity {
                 .compose(RfResultHandler.handleRespResult())
                 .compose(RfResultHandler.transformer)
                 .subscribe(provinces ->{
-                    System.out.println(provinces);
+                    System.out.println(provinces.getData().toString());
+//                    ProvincesBean mProvincesBean = new Gson().fromJson(provinces.getData().toString(), ProvincesBean.class);
+//                    mProvincesBean.getProvincesList();
+                    ArrayList<ProvincesBean.Provinces> list = new Gson().fromJson(provinces.getData().toString(), ArrayList.class);
                 },throwable -> {
-                    System.out.println(throwable.toString());
+                    throwable.printStackTrace();
                 });
     }
 
