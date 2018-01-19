@@ -11,10 +11,11 @@ import android.widget.TextView;
 import com.androidkun.xtablayout.XTabLayout;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
-import com.ms.tjgf.mvp.curriculum.fragment.StudyFragment;
 import com.ms.tjgf.mvp.curriculum.map.MapActivity;
+import com.ms.tjgf.mvp.curriculum.master.MasterFragment;
 import com.ms.tjgf.mvp.curriculum.outdoor.OutdoorFragment;
 import com.ms.tjgf.mvp.curriculum.privateschool.PrivateSchoolFragment;
+import com.ms.tjgf.mvp.curriculum.study.StudyFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,8 @@ import java.util.List;
 public class CurriculumFragment extends BaseFragment implements View.OnClickListener {
     private XTabLayout tabLayout;
     private ViewPager viewPager;
-    private List<Fragment> list;
+    private List<Fragment> list = new ArrayList<>();
+    ;
     private MyAdapter adapter;
     private String[] titles = {"太极自修课", "私教", "室外", "大师课"};
     private TextView mNearbyBtn;
@@ -45,11 +47,10 @@ public class CurriculumFragment extends BaseFragment implements View.OnClickList
         mNearbyBtn = view.findViewById(R.id.nearby_btn);
         mNearbyBtn.setOnClickListener(this);
         //页面，数据源
-        list = new ArrayList<>();
         list.add(new StudyFragment());
         list.add(new PrivateSchoolFragment());
         list.add(new OutdoorFragment());
-        list.add(new StudyFragment());
+        list.add(new MasterFragment());
         //ViewPager的适配器
         adapter = new MyAdapter(getActivity().getSupportFragmentManager());
         viewPager.setAdapter(adapter);

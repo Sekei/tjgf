@@ -2,6 +2,8 @@ package com.ms.tjgf.mvp.curriculum.study;
 
 
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
@@ -12,6 +14,7 @@ import com.ms.tjgf.base.BaseFragment;
 
 public class StudyFragment extends BaseFragment {
 
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_study;
@@ -20,5 +23,6 @@ public class StudyFragment extends BaseFragment {
     @Override
     protected void initView(View view) {
         super.initView(view);
+
     }
 }

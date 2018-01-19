@@ -31,6 +31,15 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+
+    <!--自定义五角星评论-->
+    <style name="RadingStyle" parent="@android:style/Widget.RatingBar">
+        <!-- 定义星星图片 -->
+        <item name="android:progressDrawable">@drawable/layer_live_rating_bar</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:maxHeight">25dp</item>
+    </style>
+
     <!--button定义-->
     <style name="button_17_app_theme_bg">
         <item name="android:layout_width">match_parent</item>
@@ -81,16 +90,24 @@
         <item name="android:textColor">@color/color_EAEAEA</item>
         <item name="android:textSize">17sp</item>
     </style>
+
     <style name="text_EAEAEA">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_EAEAEA</item>
     </style>
+
     <style name="text_16_8A8A93">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_8A8A93</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_8A8A93">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_8A8A93</item>
     </style>
 
     <style name="text_17_F95251">
@@ -106,18 +123,21 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="text_14_000000">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_000</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="text_939393">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_939393</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="text_14_969696">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -159,11 +179,13 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">15sp</item>
     </style>
+
     <style name="text_FFFFFF">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+
     <style name="imageview_wrap_content_center">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -175,6 +197,20 @@
         <item name="android:layout_height">30dp</item>
         <item name="android:textColor">@color/news_top_button_color_selector</item>
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="edittext_4E4E4E">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_rect_4_24242d</item>
+        <item name="android:textColorHint">@color/color_4E4E4E</item>
+        <item name="android:textColor">@color/color_4E4E4E</item>
+    </style>
+
+    <style name="edittext_23232A">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_rect_4_23232a</item>
     </style>
 
     <style name="text_27_FA5251">
@@ -190,6 +226,17 @@
         <item name="android:background">@color/color_23232A</item>
     </style>
 
+    <style name="line_25252E">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_25252E</item>
+    </style>
+
+    <style name="line_23232A">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/color_23232A</item>
+    </style>
+
     <style name="line_1_3C3C47">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
@@ -199,6 +246,12 @@
     <style name="line_10_24242D">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/color_24242D</item>
+    </style>
+
+    <style name="line_24242D">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/color_24242D</item>
     </style>
 

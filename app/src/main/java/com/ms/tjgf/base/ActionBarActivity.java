@@ -56,7 +56,6 @@ public abstract class ActionBarActivity extends BaseActivity implements View.OnC
         mBack.setOnClickListener(this);
         mTitle = findViewById(R.id.title);
         if (getActionBarType() == 0) { //透明风格设计
-
             //setStatusBarColor();//通知栏透明
         } else {
             mTitle.setText(getTitle());

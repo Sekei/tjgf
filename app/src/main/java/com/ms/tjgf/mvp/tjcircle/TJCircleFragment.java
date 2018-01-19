@@ -10,7 +10,7 @@ import android.view.View;
 import com.androidkun.xtablayout.XTabLayout;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
-import com.ms.tjgf.mvp.curriculum.fragment.StudyFragment;
+import com.ms.tjgf.mvp.curriculum.study.StudyFragment;
 import com.ms.tjgf.mvp.tjcircle.dynamic.DynamicFragment;
 import com.ms.tjgf.mvp.tjcircle.video.VideoFragment;
 

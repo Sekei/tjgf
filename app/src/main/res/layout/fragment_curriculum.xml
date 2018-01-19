@@ -11,20 +11,24 @@
         android:layout_height="48dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/text_FFFFFF"
             android:layout_centerInParent="true"
-            android:text="课程"
-            android:textColor="@color/colorWhite"
-            android:textSize="18sp" />
+            android:drawableLeft="@drawable/icon_address"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="团体课报名"
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/nearby_btn"
-            style="@style/text_15_FFFFFF"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="18dp"
-            android:text="附近课程" />
+            style="@style/text_FFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/icon_address"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="附近课程"
+            android:textSize="17sp" />
     </RelativeLayout>
 
     <LinearLayout
