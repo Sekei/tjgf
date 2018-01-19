@@ -50,8 +50,8 @@ public abstract class ActionBarActivity extends BaseActivity implements View.OnC
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);// 锁定竖屏
         setContentView(getLayoutId());
         applyKitKatTranslucency();//将状态栏设置为主题色
-        mHeadTopColor = findViewById(R.id.head_top_color);
-        mHeadTopColor.setBackgroundResource(getStatusBarTintResource());
+//        mHeadTopColor = findViewById(R.id.head_top_color);
+//        mHeadTopColor.setBackgroundResource(getStatusBarTintResource());
         mBack = findViewById(R.id.relative_back);
         mBack.setOnClickListener(this);
         mTitle = findViewById(R.id.title);

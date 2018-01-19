@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.DisplayMetrics;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.ms.tjgf.network.bean.UserBean;
 
 /**
  * Created by Administrator on 2018/1/15.
@@ -11,6 +12,7 @@ import com.baidu.mapapi.SDKInitializer;
 public class MyApplication extends Application {
     //应用实例
     private static MyApplication instance;
+    private static UserBean mUser;
     // 获取屏幕分辨率
     private DisplayMetrics mDisplay = new DisplayMetrics();
 
@@ -20,7 +22,7 @@ public class MyApplication extends Application {
         instance = this;
         mDisplay = this.getResources().getDisplayMetrics();
         //百度地图初始化
-        SDKInitializer.initialize(getApplicationContext());
+//        SDKInitializer.initialize(getApplicationContext());
     }
 
     //获得实例
@@ -48,6 +50,9 @@ public class MyApplication extends Application {
         return (int) (sp * mDisplay.scaledDensity);
     }
 
+    public static UserBean getUser(){
+        return mUser;
+    }
     /**
      * 获取 屏幕像素 px
      *
