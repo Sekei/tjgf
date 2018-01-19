@@ -43,7 +43,7 @@ import java.util.List;
  * Created by MissSekei on 2018/1/15.
  */
 
-public class MapActivity extends ActionBarActivity implements RadioGroup.OnCheckedChangeListener, BDLocationListener, BaiduMap.OnMapLoadedCallback {
+public class  MapActivity extends ActionBarActivity implements RadioGroup.OnCheckedChangeListener, BDLocationListener, BaiduMap.OnMapLoadedCallback {
 
     private RadioGroup mRadioGroup;
     private MapView mMapView;
