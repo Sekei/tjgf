@@ -24,10 +24,10 @@ import java.util.List;
 public class TJCircleFragment extends BaseFragment {
     private XTabLayout tabLayout;
     private ViewPager viewPager;
-    private List<Fragment> list;
+    private List<Fragment> list= new ArrayList<>();
     private MyAdapter adapter;
     private String[] titles = {"动态", "视频", "赛事", "传承", "排行榜"};
-    private View view;
+
 
     @Override
     protected int getLayoutId() {
@@ -40,8 +40,6 @@ public class TJCircleFragment extends BaseFragment {
         //实例化
         viewPager = view.findViewById(R.id.tjcircle_viewpager);
         tabLayout = view.findViewById(R.id.tjcircle_xtablayout);
-        //页面，数据源
-        list = new ArrayList<>();
         list.add(new DynamicFragment());//动态
         list.add(new VideoFragment());//视频
         list.add(new StudyFragment());

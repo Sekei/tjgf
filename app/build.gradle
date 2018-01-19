@@ -17,8 +17,8 @@ android {
         }
     }
 
-    sourceSets{
-        main{
+    sourceSets {
+        main {
             jniLibs.srcDir 'libs'
             //说明so的路径为该libs路径，关联所有地图SDK的so文件
         }
@@ -40,6 +40,7 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.32'
     //通知栏变色框架
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    // compile 'com.githang:status-bar-compat:latest.integration'
     //圆角头像框架
     compile 'com.makeramen:roundedimageview:2.2.1'
     //标签框架
