@@ -7,7 +7,6 @@ import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseAdapterHelper;
 import com.ms.tjgf.base.QuickAdapter;
 import com.ms.tjgf.mvp.curriculum.privateschool.bean.PrivateSchoolBean;
-import com.ms.tjgf.mvp.tjcircle.dynamic.bean.DynamicBean;
 
 import java.util.ArrayList;
 import java.util.List;

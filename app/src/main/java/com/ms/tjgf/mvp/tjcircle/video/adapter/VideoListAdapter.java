@@ -6,7 +6,6 @@ import com.donkingliang.labels.LabelsView;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseAdapterHelper;
 import com.ms.tjgf.base.QuickAdapter;
-import com.ms.tjgf.mvp.tjcircle.dynamic.bean.DynamicBean;
 import com.ms.tjgf.mvp.tjcircle.video.bean.VideoListBean;
 
 import java.util.ArrayList;

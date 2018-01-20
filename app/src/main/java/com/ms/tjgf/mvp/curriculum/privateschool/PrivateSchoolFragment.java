@@ -10,7 +10,6 @@ import com.ms.tjgf.base.BaseFragment;
 import com.ms.tjgf.mvp.curriculum.privateschool.adapter.PrivateSchoolAdapter;
 import com.ms.tjgf.mvp.curriculum.privateschool.bean.PrivateSchoolBean;
 import com.ms.tjgf.mvp.curriculumdetails.SignUpActivity;
-import com.ms.tjgf.mvp.tjcircle.dynamic.bean.DynamicBean;
 
 import java.util.ArrayList;
 import java.util.List;

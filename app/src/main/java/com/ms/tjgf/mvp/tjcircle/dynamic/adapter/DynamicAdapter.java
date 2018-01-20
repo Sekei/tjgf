@@ -6,7 +6,7 @@ import com.donkingliang.labels.LabelsView;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseAdapterHelper;
 import com.ms.tjgf.base.QuickAdapter;
-import com.ms.tjgf.mvp.tjcircle.dynamic.bean.DynamicBean;
+import com.ms.tjgf.network.bean.DynamicBean;
 import com.ms.tjgf.widget.NineGridTestLayout;
 
 import java.util.ArrayList;
@@ -16,14 +16,14 @@ import java.util.List;
  * Created by MissSekei on 2018/1/12.
  */
 
-public class DynamicAdapter extends QuickAdapter<DynamicBean> {
+public class DynamicAdapter extends QuickAdapter<DynamicBean.DynamicData> {
 
-    public DynamicAdapter(Context context, int layoutResId, List<DynamicBean> mData) {
+    public DynamicAdapter(Context context, int layoutResId, List<DynamicBean.DynamicData> mData) {
         super(context, layoutResId, mData);
     }
 
     @Override
-    protected void convert(BaseAdapterHelper helper, final DynamicBean item) {
+    protected void convert(BaseAdapterHelper helper, final DynamicBean.DynamicData item) {
         ArrayList<String> listUrl = new ArrayList<>();
         listUrl.add("http://img2.imgtn.bdimg.com/it/u=1006187901,4223500905&fm=27&gp=0.jpg");
         listUrl.add("http://img1.imgtn.bdimg.com/it/u=695237186,1353057623&fm=27&gp=0.jpg");

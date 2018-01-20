@@ -1,5 +1,6 @@
 package com.ms.tjgf.network;
 
+import com.ms.tjgf.network.bean.DynamicBean;
 import com.ms.tjgf.network.bean.ProvincesBean;
 
 import retrofit2.http.Field;
@@ -13,8 +14,12 @@ import retrofit2.http.POST;
 public interface IHttp {
     @POST("/v1/login")
     @FormUrlEncoded
-    rx.Observable<RespBean> login(@Field("username") String username,@Field("password")String pwd);
+    rx.Observable<RespBean> login(@Field("username") String username, @Field("password") String pwd);
 
     @POST("/v1/area/provinces/")
     rx.Observable<ProvincesBean> getAreaProvince();
+
+    //动态接口
+    @POST("/v1/blog/home/")
+    rx.Observable<DynamicBean> getDynamic();
 }

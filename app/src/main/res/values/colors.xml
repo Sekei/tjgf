@@ -31,11 +31,13 @@
     <color name="color_000">#000</color>
     <color name="color_292932">#292932</color>
     <color name="color_4E4E4E">#4E4E4E</color>
-
+    <color name="color_424242E">#24242E</color>
     <color name="color_25252E">#25252E</color>
     <color name="color_6D6D77">#6D6D77</color>
     <color name="color_6D6D78">#6D6D78</color>
     <color name="color_FFBE1A">#FFBE1A</color>
     <color name="color_858585">#858585</color>
     <color name="color_373743">#373743</color>
+    <color name="color_81818E">#81818E</color>
+
 </resources>

@@ -15,7 +15,6 @@ import java.util.List;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.PopupWindow.OnDismissListener;
-import android.widget.TextView;
 
 /**
  * 太极自修课

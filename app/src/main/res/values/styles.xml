@@ -40,6 +40,11 @@
         <item name="android:maxHeight">25dp</item>
     </style>
 
+    <style name="pop_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
     <!--button定义-->
     <style name="button_17_app_theme_bg">
         <item name="android:layout_width">match_parent</item>
@@ -95,6 +100,16 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_EAEAEA</item>
+    </style>
+    <style name="text_81818E">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_81818E</item>
+    </style>
+    <style name="text_888888">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_888888</item>
     </style>
 
     <style name="text_858585">

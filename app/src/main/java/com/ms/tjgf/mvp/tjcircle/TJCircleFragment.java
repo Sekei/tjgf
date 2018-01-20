@@ -12,6 +12,9 @@ import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
 import com.ms.tjgf.mvp.curriculum.study.StudyFragment;
 import com.ms.tjgf.mvp.tjcircle.dynamic.DynamicFragment;
+import com.ms.tjgf.mvp.tjcircle.inherit.InheritFragment;
+import com.ms.tjgf.mvp.tjcircle.match.MatchFragment;
+import com.ms.tjgf.mvp.tjcircle.ranking.RankingFragment;
 import com.ms.tjgf.mvp.tjcircle.video.VideoFragment;
 
 import java.util.ArrayList;
@@ -24,7 +27,7 @@ import java.util.List;
 public class TJCircleFragment extends BaseFragment {
     private XTabLayout tabLayout;
     private ViewPager viewPager;
-    private List<Fragment> list= new ArrayList<>();
+    private List<Fragment> list = new ArrayList<>();
     private MyAdapter adapter;
     private String[] titles = {"动态", "视频", "赛事", "传承", "排行榜"};
 
@@ -42,9 +45,9 @@ public class TJCircleFragment extends BaseFragment {
         tabLayout = view.findViewById(R.id.tjcircle_xtablayout);
         list.add(new DynamicFragment());//动态
         list.add(new VideoFragment());//视频
-        list.add(new StudyFragment());
-        list.add(new StudyFragment());
-        list.add(new StudyFragment());
+        list.add(new MatchFragment());//赛事
+        list.add(new InheritFragment());//传承
+        list.add(new RankingFragment());//排行榜
         //ViewPager的适配器
         adapter = new MyAdapter(getActivity().getSupportFragmentManager());
         viewPager.setAdapter(adapter);

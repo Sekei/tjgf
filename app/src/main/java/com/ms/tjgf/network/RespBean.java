@@ -1,10 +1,12 @@
 package com.ms.tjgf.network;
 
+import java.io.Serializable;
+
 /**
  * Created by fangt on 2018/1/18.
  */
 
-public class RespBean<T> {
+public class RespBean<T> implements Serializable{
     public int status;
     public String msg;
     public T data;
