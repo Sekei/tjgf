@@ -22,7 +22,7 @@ public class MyApplication extends Application {
         instance = this;
         mDisplay = this.getResources().getDisplayMetrics();
         //百度地图初始化
-//        SDKInitializer.initialize(getApplicationContext());
+        SDKInitializer.initialize(getApplicationContext());
     }
 
     //获得实例
@@ -50,9 +50,10 @@ public class MyApplication extends Application {
         return (int) (sp * mDisplay.scaledDensity);
     }
 
-    public static UserBean getUser(){
+    public static UserBean getUser() {
         return mUser;
     }
+
     /**
      * 获取 屏幕像素 px
      *

@@ -49,8 +49,10 @@ public class RankingFragment extends BaseFragment implements View.OnClickListene
         switch (view.getId()) {
             case R.id.btn_group:
                 if (mPosition == 0) {
+                    mPosition = 1;
                     mBtnGroup.setText("名师榜");
                 } else {
+                    mPosition = 0;
                     mBtnGroup.setText("斗士榜");
                 }
                 break;
