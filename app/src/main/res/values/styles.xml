@@ -31,7 +31,10 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
-
+    <!--popwin样式-->
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_in</item>
+    </style>
     <!--自定义五角星评论-->
     <style name="RadingStyle" parent="@android:style/Widget.RatingBar">
         <!-- 定义星星图片 -->
@@ -59,6 +62,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_888888</item>
         <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_757575">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_757575</item>
     </style>
 
     <style name="text_20_FFFFFF">
@@ -101,11 +110,13 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_EAEAEA</item>
     </style>
+
     <style name="text_81818E">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_81818E</item>
     </style>
+
     <style name="text_888888">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -129,6 +140,12 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_8A8A93</item>
+    </style>
+
+    <style name="text_9E9E9E">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_9E9E9E</item>
     </style>
 
     <style name="text_17_F95251">
@@ -157,6 +174,19 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_939393</item>
         <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="lodin_editext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/color_A7A7B3</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/bg_edit_4_8c323040</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
     <style name="text_14_969696">

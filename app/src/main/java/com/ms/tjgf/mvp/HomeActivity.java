@@ -3,14 +3,14 @@ package com.ms.tjgf.mvp;
 
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.ms.tjgf.R;
-import com.ms.tjgf.base.ActionBarActivity;
 import com.ms.tjgf.base.AppActionBarActivity;
 import com.ms.tjgf.mvp.curriculum.CurriculumFragment;
-import com.ms.tjgf.mvp.my.fragment.MyFragment;
+import com.ms.tjgf.mvp.my.MyFragment;
 import com.ms.tjgf.mvp.news.NewsFragment;
 import com.ms.tjgf.mvp.tjcircle.TJCircleFragment;
 
@@ -28,7 +28,15 @@ public class HomeActivity extends AppActionBarActivity implements RadioGroup.OnC
         if (mPosition == 0 || mPosition == 2) {
             return R.drawable.app_theme_bg;
         }
+        if (mPosition == 3) {
+            return R.color.color_32323C;
+        }
         return R.color.color_171717;
+    }
+
+    @Override
+    protected View getRootView() {
+        return null;
     }
 
     @Override

@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.TextView;
 
 import com.ms.tjgf.R;
+import com.ms.tjgf.bean.StudyFactionBean;
+import com.ms.tjgf.mvp.curriculum.study.adapter.SpinerCoachAdapter;
+import com.ms.tjgf.mvp.curriculum.study.adapter.SpinerSeriesAdapter;
+import com.ms.tjgf.mvp.curriculum.study.adapter.SpinerTricksAdapter;
 
 import java.util.List;
 
@@ -19,65 +22,62 @@ import java.util.List;
  * Created by MissSekei on 2018/1/19.
  */
 
-public class SpinerPopWindow<T> extends PopupWindow {
+public class SpinerPopWindow extends PopupWindow {
     private LayoutInflater inflater;
     private ListView mListView;
-    private List<T> list;
-    private MyAdapter mAdapter;
+    private List<StudyFactionBean> newsList;
+    private SpinerSeriesAdapter mSpinerPopAdapter;
+    private SpinerCoachAdapter mSpinerCoachAdapter;
+    private SpinerTricksAdapter mSpinerTricksAdapter;
+    private Button mPrompt;
+    private Context mContext;
+    private int mPosition;
+    private AdapterView.OnItemClickListener mClickListener;
 
-    public SpinerPopWindow(Context context, List<T> list, AdapterView.OnItemClickListener clickListener) {
+    public SpinerPopWindow(Context context, List<StudyFactionBean> newsList, AdapterView.OnItemClickListener clickListener) {
         super(context);
-        inflater = LayoutInflater.from(context);
-        this.list = list;
-        init(clickListener);
+        this.inflater = LayoutInflater.from(context);
+        this.mContext = context;
+        this.newsList = newsList;
+        this.mClickListener = clickListener;
+        initView();
     }
 
-    private void init(AdapterView.OnItemClickListener clickListener) {
+    private void initView() {
         View view = inflater.inflate(R.layout.spiner_window_layout, null);
         setContentView(view);
+        mPrompt = view.findViewById(R.id.prompt);
+        //设定弹出窗口容器的属性
         setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         setFocusable(true);
         ColorDrawable dw = new ColorDrawable(0x00);
         setBackgroundDrawable(dw);
+        // setAnimationStyle(R.style.PopupAnimation);
         mListView = view.findViewById(R.id.listview);
-        mListView.setAdapter(mAdapter = new MyAdapter());
-        mListView.setOnItemClickListener(clickListener);
+        mListView.setOnItemClickListener(mClickListener);
     }
 
-    private class MyAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return list.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return list.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder = null;
-            if (convertView == null) {
-                holder = new ViewHolder();
-                convertView = inflater.inflate(R.layout.spiner_item_layout, null);
-                holder.tvName = (TextView) convertView.findViewById(R.id.tv_name);
-                convertView.setTag(holder);
-            } else {
-                holder = (ViewHolder) convertView.getTag();
-            }
-            holder.tvName.setText(getItem(position).toString());
-            return convertView;
-        }
+    //课程系列
+    public void getStudySeries() {
+        mPrompt.setText("请选择系列");
+        mSpinerPopAdapter = new SpinerSeriesAdapter(mContext, R.layout.spiner_item_layout, newsList);
+        mListView.setAdapter(mSpinerPopAdapter);
     }
 
-    private class ViewHolder {
-        private TextView tvName;
+    //课程套路
+    public void getStudyTricks(int mPosition) {
+        mPrompt.setText("请选择套路");
+        mSpinerTricksAdapter = new SpinerTricksAdapter(mContext, R.layout.spiner_item_layout, newsList.get(mPosition).getStyle());
+        mListView.setAdapter(mSpinerTricksAdapter);
+        this.mPosition = mPosition;
     }
+
+    //课程教练
+    public void getStudyCoach(int position) {
+        mPrompt.setText("请选择教练");
+        mSpinerCoachAdapter = new SpinerCoachAdapter(mContext, R.layout.spiner_item_layout, newsList.get(mPosition).getStyle().get(position).getTeacher());
+        mListView.setAdapter(mSpinerCoachAdapter);
+    }
+
 }

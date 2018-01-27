@@ -2,7 +2,7 @@ package com.ms.tjgf.utils;
 
 import android.widget.Toast;
 
-import com.ms.tjgf.application.MyApplication;
+import com.ms.tjgf.MyApp;
 
 
 public class ToastUtils {
@@ -28,7 +28,7 @@ public class ToastUtils {
             message = "未知错误";
         }
         if (toast == null) {
-            toast = Toast.makeText(MyApplication.getInstance(), message, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(MyApp.getInstance(), message, Toast.LENGTH_SHORT);
             toast.show();
             oneTime = System.currentTimeMillis();
         } else {

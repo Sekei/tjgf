@@ -10,16 +10,19 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.ms.tjgf.R;
+import com.ms.tjgf.widget.LoadingView;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 
-public abstract class ActionBarActivity extends BaseActivity implements View.OnClickListener {
+public abstract class ActionBarActivity extends BaseActivity implements View.OnClickListener, IBaseView {
     //界面view
     protected abstract int getLayoutId();
 
+    private LoadingView loadingView = new LoadingView();
     private TextView mTitle;
     private RelativeLayout mBack, mHeadTopColor;
 
@@ -45,19 +48,38 @@ public abstract class ActionBarActivity extends BaseActivity implements View.OnC
         initView();
     }
 
+    protected View getRootView() {
+        return null;
+    }
+
+    @Override
+    public void showProgress() {
+        loadingView.showLoading(getRootView());
+    }
+
+    @Override
+    public void hideProgress() {
+        loadingView.hideLoading();
+    }
+
+    @Override
+    public void showToast(String content) {
+        Toast.makeText(this, content, Toast.LENGTH_LONG).show();
+    }
+
     // view初始化
     protected void initActionBar() {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);// 锁定竖屏
         setContentView(getLayoutId());
         applyKitKatTranslucency();//将状态栏设置为主题色
-//        mHeadTopColor = findViewById(R.id.head_top_color);
-//        mHeadTopColor.setBackgroundResource(getStatusBarTintResource());
-        mBack = findViewById(R.id.relative_back);
-        mBack.setOnClickListener(this);
-        mTitle = findViewById(R.id.title);
         if (getActionBarType() == 0) { //透明风格设计
-            //setStatusBarColor();//通知栏透明
+            setStatusBarColor();//通知栏透明
         } else {
+            mHeadTopColor = findViewById(R.id.head_top_color);
+            mHeadTopColor.setBackgroundResource(getStatusBarTintResource());
+            mBack = findViewById(R.id.relative_back);
+            mBack.setOnClickListener(this);
+            mTitle = findViewById(R.id.title);
             mTitle.setText(getTitle());
         }
     }

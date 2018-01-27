@@ -1,30 +1,21 @@
 package com.ms.tjgf.mvp.curriculumdetails;
 
 import android.graphics.Rect;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.androidkun.xtablayout.XTabLayout;
-import com.bumptech.glide.Glide;
 import com.ms.tjgf.R;
-import com.ms.tjgf.application.MyApplication;
 import com.ms.tjgf.base.ActionBarActivity;
 import com.ms.tjgf.mvp.curriculumdetails.fragment.CommentFragment;
 import com.ms.tjgf.mvp.curriculumdetails.fragment.CourseDetailsFragment;
-import com.ms.tjgf.utils.ToastUtils;
 import com.ms.tjgf.widget.CustomViewPager;
-import com.ms.tjgf.widget.PileLayout;
-import com.ms.tjgf.widget.roundimage.CircleImageView;
 
 import java.util.ArrayList;
 import java.util.List;

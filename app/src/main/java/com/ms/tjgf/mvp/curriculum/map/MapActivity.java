@@ -1,12 +1,6 @@
 package com.ms.tjgf.mvp.curriculum.map;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationManager;
 import android.support.annotation.IdRes;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,9 +26,7 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.ms.tjgf.R;
-import com.ms.tjgf.application.MyApplication;
 import com.ms.tjgf.base.ActionBarActivity;
-import com.ms.tjgf.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;

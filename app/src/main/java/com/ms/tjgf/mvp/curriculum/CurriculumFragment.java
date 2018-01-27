@@ -28,7 +28,6 @@ public class CurriculumFragment extends BaseFragment implements View.OnClickList
     private XTabLayout tabLayout;
     private ViewPager viewPager;
     private List<Fragment> list = new ArrayList<>();
-    ;
     private MyAdapter adapter;
     private String[] titles = {"太极自修课", "私教", "室外", "大师课"};
     private TextView mNearbyBtn;

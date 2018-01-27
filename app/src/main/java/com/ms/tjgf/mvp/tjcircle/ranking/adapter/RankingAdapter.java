@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.ms.tjgf.base.BaseAdapterHelper;
 import com.ms.tjgf.base.QuickAdapter;
-import com.ms.tjgf.mvp.tjcircle.match.bean.MatchBean;
 import com.ms.tjgf.mvp.tjcircle.ranking.bean.RankingBean;
 
 import java.util.List;

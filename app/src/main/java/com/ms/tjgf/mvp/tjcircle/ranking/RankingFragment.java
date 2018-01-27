@@ -2,6 +2,7 @@ package com.ms.tjgf.mvp.tjcircle.ranking;
 
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 排行榜
  * Created by MissSekei on 2018/1/12.
  */
 
@@ -24,6 +26,7 @@ public class RankingFragment extends BaseFragment implements View.OnClickListene
     private int mPosition = 0;//默认名师榜
     private ListView mRankingList;
     private RankingAdapter mRankingAdapter;
+    private ImageView mRankingImg;
 
     @Override
     protected int getLayoutId() {
@@ -35,6 +38,7 @@ public class RankingFragment extends BaseFragment implements View.OnClickListene
         super.initView(view);
         mBtnGroup = view.findViewById(R.id.btn_group);
         mBtnGroup.setOnClickListener(this);
+        mRankingImg = view.findViewById(R.id.img_bg);
         mRankingList = view.findViewById(R.id.ranking_list);
         List<RankingBean> arr = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
@@ -51,9 +55,11 @@ public class RankingFragment extends BaseFragment implements View.OnClickListene
                 if (mPosition == 0) {
                     mPosition = 1;
                     mBtnGroup.setText("名师榜");
+                    mRankingImg.setBackgroundResource(R.drawable.bg_fighter);
                 } else {
                     mPosition = 0;
                     mBtnGroup.setText("斗士榜");
+                    mRankingImg.setBackgroundResource(R.drawable.ranking_teacher_bg);
                 }
                 break;
         }

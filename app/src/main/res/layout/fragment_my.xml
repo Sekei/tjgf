@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_23232A"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/app_theme_bg">
+        android:background="@color/color_32323C">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/my_user_img"
@@ -22,7 +23,7 @@
             app:riv_oval="true" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
@@ -36,18 +37,47 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="18sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.donkingliang.labels.LabelsView
+                android:id="@+id/myuser_labels"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="认证中..."
-                android:textColor="@color/colorWhite" />
+                android:layout_marginTop="5dp"
+                app:labelBackground="@drawable/my_label_4_bg"
+                app:labelTextColor="@color/color_FFBE1A"
+                app:labelTextPaddingBottom="1dp"
+                app:labelTextPaddingLeft="5dp"
+                app:labelTextPaddingRight="5dp"
+                app:labelTextPaddingTop="1dp"
+                app:labelTextSize="12sp"
+                app:lineMargin="5dp"
+                app:maxSelect="5"
+                app:selectType="SINGLE"
+                app:wordMargin="5dp" />
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_my_right" />
     </RelativeLayout>
 
-    <View
+    <com.ms.tjgf.widget.CustomGridView
+        android:id="@+id/my_gird"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@drawable/app_theme_bg" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:horizontalSpacing="1dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="1dp" />
 
+    <Button
+        android:id="@+id/mlogin_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="登陆" />
 </LinearLayout>

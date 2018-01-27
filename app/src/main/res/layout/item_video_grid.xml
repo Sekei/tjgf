@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="195dp">
 
     <ImageView
+        android:id="@+id/video_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/tjgf_bg" />
+        android:scaleType="fitXY" />
 
     <TextView
+        android:id="@+id/video_title"
         style="@style/text_FFFFFF"
         android:layout_alignParentRight="true"
         android:layout_marginRight="6.5dp"
@@ -20,18 +20,18 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="2.5dp"
-        android:text="太极推手"
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/video_nickname"
         style="@style/text_FFFFFF"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="12dp"
         android:layout_marginLeft="15dp"
-        android:text="张三丰"
         android:textSize="17sp" />
 
     <TextView
+        android:id="@+id/video_favorite"
         style="@style/text_FFFFFF"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -40,6 +40,5 @@
         android:drawableLeft="@drawable/zan_no"
         android:drawablePadding="2.5dp"
         android:gravity="center_vertical"
-        android:text="8561"
         android:textSize="14sp" />
 </RelativeLayout>

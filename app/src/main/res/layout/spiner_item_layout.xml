@@ -9,7 +9,7 @@
         style="@style/text_EAEAEA"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginLeft="21dp"
+        android:layout_marginLeft="17dp"
         android:textSize="14sp" />
 
 </LinearLayout>

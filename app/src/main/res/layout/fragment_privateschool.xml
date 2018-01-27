@@ -10,7 +10,7 @@
         android:background="@color/color_23232A">
 
         <RadioGroup
-            android:id="@+id/radio_group_button"
+            android:id="@+id/radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radio_button_home"
+                android:id="@+id/radio_btn_zs"
                 style="@style/RadioGroupButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
 
 
             <RadioButton
-                android:id="@+id/radio_button_discovery"
+                android:id="@+id/radio_btn_tl"
                 style="@style/RadioGroupButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

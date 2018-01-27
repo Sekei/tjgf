@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Abstraction class of a BaseAdapter in which you only need to provide the
+ * Abstraction class of a BaseViewPagerAdapter in which you only need to provide the
  * convert() implementation.<br/>
  * Using the provided BaseAdapterHelper, your code is minimalist.
  * 

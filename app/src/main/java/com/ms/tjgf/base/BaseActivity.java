@@ -1,6 +1,7 @@
 package com.ms.tjgf.base;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -8,9 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.ms.tjgf.R;
+import com.ms.tjgf.utils.ToastUtils;
+import com.ms.tjgf.widget.LoadingView;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 

@@ -2,21 +2,26 @@ package com.ms.tjgf.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.PorterDuff;
+import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import com.ms.tjgf.R;
+import com.ms.tjgf.MyApp;
 
 /**
  * Created by MissSekei on 2018/1/16.
  */
 
 public class RatioImageView extends ImageView {
-
+    private Paint paint;
     /**
      * 宽高比例
      */
@@ -24,6 +29,7 @@ public class RatioImageView extends ImageView {
 
     public RatioImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        paint = new Paint();
     }
 
     public RatioImageView(Context context, AttributeSet attrs) {
@@ -35,6 +41,22 @@ public class RatioImageView extends ImageView {
 
     public RatioImageView(Context context) {
         super(context);
+    }
+
+    /**
+     * 绘制圆角矩形图片
+     *
+     * @author se7en
+     */
+    @Override
+    protected void onDraw(Canvas canvas) {
+        Path path = new Path();
+        int w = getWidth();
+        int h = getHeight();
+        //这里对path添加一个圆角区域，这里一般需要将dp转换为pixel
+        path.addRoundRect(new RectF(0, 0, w, h), MyApp.getInstance().dp2px(5), MyApp.getInstance().dp2px(5), Path.Direction.CW);
+        canvas.clipPath(path);//将Canvas按照上面的圆角区域截取
+        super.onDraw(canvas);
     }
 
     /**

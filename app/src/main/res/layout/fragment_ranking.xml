@@ -7,6 +7,7 @@
 
 
     <ImageView
+        android:id="@+id/img_bg"
         android:layout_width="match_parent"
         android:layout_height="116dp"
         android:background="@drawable/ranking_teacher_bg" />

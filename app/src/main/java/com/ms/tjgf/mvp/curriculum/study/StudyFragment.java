@@ -7,6 +7,13 @@ import android.widget.AdapterView;
 
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
+import com.ms.tjgf.base.IBaseListPresenter;
+import com.ms.tjgf.bean.OutDoorData;
+import com.ms.tjgf.bean.StudyFactionBean;
+import com.ms.tjgf.mvp.curriculum.outdoor.persenter.OutDoorListPresenter;
+import com.ms.tjgf.mvp.curriculum.study.persenter.StudyPresenter;
+import com.ms.tjgf.mvp.curriculum.study.view.IStudyView;
+import com.ms.tjgf.utils.ToastUtils;
 import com.ms.tjgf.widget.SpinerPopWindow;
 
 import java.util.ArrayList;
@@ -15,18 +22,23 @@ import java.util.List;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.PopupWindow.OnDismissListener;
+import android.widget.TextView;
 
 /**
  * 太极自修课
  * Created by MissSekei on 2018/1/12.
  */
 
-public class StudyFragment extends BaseFragment implements OnDismissListener, OnItemClickListener, View.OnClickListener {
-    private SpinerPopWindow<String> mSpinerPopWindow;
-    private List<String> list;
-    private Button mStudyName, mStudyCoach;
-    private Button mStudyTricks;
+public class StudyFragment extends BaseFragment implements IStudyView, OnDismissListener, OnItemClickListener, View.OnClickListener {
+    private SpinerPopWindow mSpinerPopWindow;
+    private Button mStudyName, mStudyCoach, mStudyTricks;
+    private View mSpinerPopSeries, mSpinerPopTricks, mSpinerPopCoach, indicator_line, indicator_linetwo;
     private int index = 0;//记录当前选中的
+    private List<StudyFactionBean> newsList = new ArrayList<>();
+    private IBaseListPresenter iStudyPresenter;
+    private TextView mSecondSteps, mThirdSteps;
+    private RecordSelectionBean mSelection = new RecordSelectionBean();
+
 
     @Override
     protected int getLayoutId() {
@@ -42,20 +54,35 @@ public class StudyFragment extends BaseFragment implements OnDismissListener, On
         mStudyTricks.setOnClickListener(this);
         mStudyCoach = view.findViewById(R.id.study_coach);
         mStudyCoach.setOnClickListener(this);
-
-        initData();
+        mSpinerPopSeries = view.findViewById(R.id.spiner_pop_series);
+        mSpinerPopTricks = view.findViewById(R.id.spiner_pop_tricks);
+        mSpinerPopCoach = view.findViewById(R.id.spiner_pop_coach);
+        mSecondSteps = view.findViewById(R.id.second_steps);//第二步
+        indicator_line = view.findViewById(R.id.indicator_line);
+        mThirdSteps = view.findViewById(R.id.third_steps);//第三步
+        indicator_linetwo = view.findViewById(R.id.indicator_linetwo);
+        iStudyPresenter = new StudyPresenter(this);
+        iStudyPresenter.requestNewsList(true);
     }
 
-    /**
-     * 初始化数据
-     */
-    private void initData() {
-        list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            list.add("test:" + i);
-        }
-        mSpinerPopWindow = new SpinerPopWindow<>(getActivity(), list, this);
+    @Override
+    public void dismissRefreshView() {
+        //swipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void updateNewsList(List<StudyFactionBean> newsList) {
+        this.newsList.clear();
+        this.newsList.addAll(newsList);
+        mSpinerPopWindow = new SpinerPopWindow(getActivity(), newsList, this);
         mSpinerPopWindow.setOnDismissListener(this);
+        dismissRefreshView();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        iStudyPresenter.onDestroy();
     }
 
     @Override
@@ -63,24 +90,37 @@ public class StudyFragment extends BaseFragment implements OnDismissListener, On
         switch (view.getId()) {
             case R.id.study_series:
                 index = 0;
-                mStudyName.setBackgroundResource(R.drawable.btn_rect_22_top_434351);
-                mSpinerPopWindow.setWidth(mStudyName.getWidth());
-                mSpinerPopWindow.showAsDropDown(mStudyName);
-                setTextImage(R.drawable.icon_up);
+                if (newsList.size() != 0) {
+                    mSpinerPopWindow.setWidth(mStudyName.getWidth());
+                    mSpinerPopWindow.showAsDropDown(mSpinerPopSeries);
+                    mSpinerPopWindow.getStudySeries();
+                    //重新选择套路/选择教练（且不可点击）
+                    mStudyTricks.setText("请选择套路");
+                    mStudyCoach.setText("请选择教练");
+                    mStudyCoach.setEnabled(false);
+                }
                 break;
             case R.id.study_tricks:
                 index = 1;
-                mStudyTricks.setBackgroundResource(R.drawable.btn_rect_22_top_434351);
-                mSpinerPopWindow.setWidth(mStudyTricks.getWidth());
-                mSpinerPopWindow.showAsDropDown(mStudyTricks);
-                setTextImage(R.drawable.icon_up);
+                if (newsList.get(mSelection.getSeriesposition()).getStyle().size() != 0) {
+                    mSpinerPopWindow.setWidth(mStudyName.getWidth());
+                    mSpinerPopWindow.showAsDropDown(mSpinerPopTricks);
+                    mSpinerPopWindow.getStudyTricks(mSelection.getSeriesposition());
+                    //重新赋值，请选择教练
+                    mStudyCoach.setText("请选择教练");
+                } else {
+                    ToastUtils.show("暂无对应套路");
+                }
                 break;
             case R.id.study_coach:
                 index = 2;
-                mStudyCoach.setBackgroundResource(R.drawable.btn_rect_22_top_434351);
-                mSpinerPopWindow.setWidth(mStudyCoach.getWidth());
-                mSpinerPopWindow.showAsDropDown(mStudyCoach);
-                setTextImage(R.drawable.icon_up);
+                if (newsList.get(mSelection.getSeriesposition()).getStyle().get(mSelection.getTricksposition()).getTeacher().size() != 0) {
+                    mSpinerPopWindow.setWidth(mStudyName.getWidth());
+                    mSpinerPopWindow.showAsDropDown(mSpinerPopCoach);
+                    mSpinerPopWindow.getStudyCoach(mSelection.getTricksposition());
+                } else {
+                    ToastUtils.show("暂无对应教练");
+                }
                 break;
         }
     }
@@ -90,42 +130,34 @@ public class StudyFragment extends BaseFragment implements OnDismissListener, On
      */
     @Override
     public void onDismiss() {
-        if (index == 0) {
-            mStudyName.setBackgroundResource(R.drawable.btn_rect_43_434351);
-        } else if (index == 1) {
-            mStudyTricks.setBackgroundResource(R.drawable.btn_rect_43_434351);
-        } else {
-            mStudyCoach.setBackgroundResource(R.drawable.btn_rect_43_434351);
-        }
-        setTextImage(R.drawable.icon_down);
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         mSpinerPopWindow.dismiss();
         if (index == 0) {
-            mStudyName.setText(list.get(position));
+            //记录当前选中item下标
+            mSelection.setSeriesposition(position);
+            mStudyName.setText(newsList.get(position).getName());
+            //线变色，且套路可以选择
+            mSecondSteps.setTextColor(getResources().getColor(R.color.colorWhite));
+            mSecondSteps.setBackgroundResource(R.drawable.bg_rect_ffbe1a);
+            indicator_line.setBackgroundColor(getResources().getColor(R.color.color_FFBE1A));
+            mStudyTricks.setEnabled(true);
+            mStudyTricks.setTextColor(getResources().getColor(R.color.color_EAEAEA));
         } else if (index == 1) {
-            mStudyTricks.setText(list.get(position));
+            mSelection.setTricksposition(position);
+            mStudyTricks.setText(newsList.get(mSelection.getSeriesposition()).getStyle().get(position).getName());
+            //线变色，第三步可以选择
+            mThirdSteps.setTextColor(getResources().getColor(R.color.colorWhite));
+            mThirdSteps.setBackgroundResource(R.drawable.bg_rect_ffbe1a);
+            indicator_linetwo.setBackgroundColor(getResources().getColor(R.color.color_FFBE1A));
+            mStudyCoach.setEnabled(true);
+            mStudyCoach.setTextColor(getResources().getColor(R.color.color_EAEAEA));
         } else {
-            mStudyCoach.setText(list.get(position));
-        }
-    }
-
-    /**
-     * 给TextView右边设置图片
-     *
-     * @param resId
-     */
-    private void setTextImage(int resId) {
-        Drawable drawable = getResources().getDrawable(resId);
-        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());// 必须设置图片大小，否则不显示
-        if (index == 0) {
-            mStudyName.setCompoundDrawables(null, null, drawable, null);
-        } else if (index == 1) {
-            mStudyTricks.setCompoundDrawables(null, null, drawable, null);
-        } else {
-            mStudyCoach.setCompoundDrawables(null, null, drawable, null);
+            mSelection.setCoachposition(position);
+            mStudyCoach.setText(newsList.get(mSelection.getSeriesposition()).getStyle().get(mSelection.getTricksposition()).getTeacher().get(position).getName());
         }
     }
 }

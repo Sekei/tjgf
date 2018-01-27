@@ -2,13 +2,9 @@ package com.ms.tjgf.mvp.tjcircle.inherit;
 
 
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.ListView;
 
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
-import com.ms.tjgf.mvp.tjcircle.dynamic.adapter.DynamicAdapter;
-import com.ms.tjgf.network.bean.DynamicBean;
 
 /**
  * Created by MissSekei on 2018/1/12.

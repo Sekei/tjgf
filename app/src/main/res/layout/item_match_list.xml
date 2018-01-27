@@ -21,24 +21,24 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/mathc_thumb"
                 android:layout_width="match_parent"
-                android:layout_height="163dp"
-                android:background="@drawable/tjgf_bg" />
+                android:layout_height="163dp" />
 
             <TextView
+                android:id="@+id/mathc_name"
                 style="@style/text_EAEAEA"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="6.5dp"
-                android:text="2017仙游第二届全国传统武术交流大赛延…"
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/mathc_timer"
                 style="@style/text_888888"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="2dp"
-                android:text="2017-10–09   10:30"
                 android:textSize="12sp" />
 
             <LinearLayout
@@ -51,9 +51,9 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/hold_company"
                     style="@style/text_888888"
                     android:layout_weight="1"
-                    android:text="上海市体育中心"
                     android:textSize="14sp" />
 
                 <TextView

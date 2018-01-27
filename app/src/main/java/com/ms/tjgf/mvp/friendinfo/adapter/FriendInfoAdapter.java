@@ -6,7 +6,6 @@ import com.donkingliang.labels.LabelsView;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseAdapterHelper;
 import com.ms.tjgf.base.QuickAdapter;
-import com.ms.tjgf.mvp.curriculum.privateschool.bean.PrivateSchoolBean;
 import com.ms.tjgf.mvp.friendinfo.bean.FriendInfoBean;
 import com.ms.tjgf.widget.NineGridTestLayout;
 

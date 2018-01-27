@@ -13,7 +13,7 @@
         <TextView
             style="@style/text_FFFFFF"
             android:layout_centerInParent="true"
-            android:drawableLeft="@drawable/icon_address"
+            android:drawableLeft="@drawable/icon_team"
             android:drawablePadding="7dp"
             android:gravity="center_vertical"
             android:text="团体课报名"

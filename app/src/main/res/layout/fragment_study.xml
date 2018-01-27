@@ -3,9 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_32323C"
     android:orientation="vertical">
 
-    <View style="@style/line_1_23232A" />
+    <View
+        style="@style/line_1_23232A"
+        android:layout_height="1.5dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,9 +17,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,7 +31,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center_vertical"
                     android:orientation="vertical">
 
                     <TextView
@@ -49,36 +51,8 @@
                         android:layout_marginLeft="12.5dp"
                         android:background="@color/color_6D6D78" />
 
-                </LinearLayout>
-
-
-                <Button
-                    android:id="@+id/study_series"
-                    style="@style/text_16_EAEAEA"
-                    android:layout_width="match_parent"
-                    android:layout_height="33dp"
-                    android:layout_marginLeft="21dp"
-                    android:background="@drawable/btn_rect_43_434351"
-                    android:drawableRight="@drawable/icon_down"
-                    android:gravity="left|center_vertical"
-                    android:paddingLeft="17dp"
-                    android:paddingRight="10dp"
-                    android:text="请选择系列" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="21dp"
-                android:layout_marginRight="18dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                     <TextView
+                        android:id="@+id/second_steps"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:background="@drawable/bg_rect_6d6d78"
@@ -88,59 +62,109 @@
                         android:textSize="17sp" />
 
                     <View
+                        android:id="@+id/indicator_linetwo"
                         android:layout_width="2dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="12.5dp"
                         android:background="@color/color_6D6D78" />
+
+                    <TextView
+                        android:id="@+id/third_steps"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:background="@drawable/bg_rect_6d6d78"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/color_373743"
+                        android:textSize="17sp" />
                 </LinearLayout>
 
-
-                <Button
-                    android:id="@+id/study_tricks"
-                    style="@style/text_858585"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="33dp"
-                    android:layout_marginLeft="21dp"
-                    android:background="@drawable/btn_rect_43_434351"
-                    android:drawableRight="@drawable/icon_down"
-                    android:enabled="false"
-                    android:gravity="left|center_vertical"
-                    android:paddingLeft="17dp"
-                    android:paddingRight="10dp"
-                    android:text="请选择套路"
-                    android:textSize="16sp" />
-            </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="21dp"
-                android:layout_marginRight="18dp"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:background="@drawable/bg_rect_6d6d78"
-                    android:gravity="center"
-                    android:text="3"
-                    android:textColor="@color/color_373743"
-                    android:textSize="17sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp">
 
-                <Button
-                    android:id="@+id/study_coach"
-                    style="@style/text_858585"
-                    android:layout_width="match_parent"
-                    android:layout_height="33dp"
-                    android:layout_marginLeft="21dp"
-                    android:background="@drawable/btn_rect_43_434351"
-                    android:drawableRight="@drawable/icon_down"
-                    android:enabled="false"
-                    android:gravity="left|center_vertical"
-                    android:paddingLeft="17dp"
-                    android:paddingRight="10dp"
-                    android:text="请选择教练"
-                    android:textSize="16sp" />
+                        <View
+                            android:id="@+id/spiner_pop_series"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@null" />
+
+                        <Button
+                            android:id="@+id/study_series"
+                            style="@style/text_16_EAEAEA"
+                            android:layout_width="match_parent"
+                            android:layout_height="33dp"
+                            android:background="@drawable/btn_rect_43_434351"
+                            android:drawableRight="@drawable/icon_down"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="17dp"
+                            android:paddingRight="10dp"
+                            android:text="请选择系列" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginTop="24dp">
+
+                        <View
+                            android:id="@+id/spiner_pop_tricks"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@null" />
+
+                        <Button
+                            android:id="@+id/study_tricks"
+                            style="@style/text_858585"
+                            android:layout_width="match_parent"
+                            android:layout_height="33dp"
+                            android:background="@drawable/btn_rect_43_434351"
+                            android:drawableRight="@drawable/icon_down"
+                            android:enabled="false"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="17dp"
+                            android:paddingRight="10dp"
+                            android:text="请选择套路"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginTop="24dp">
+
+                        <View
+                            android:id="@+id/spiner_pop_coach"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@null" />
+
+                        <Button
+                            android:id="@+id/study_coach"
+                            style="@style/text_858585"
+                            android:layout_width="match_parent"
+                            android:layout_height="33dp"
+                            android:background="@drawable/btn_rect_43_434351"
+                            android:drawableRight="@drawable/icon_down"
+                            android:enabled="false"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="17dp"
+                            android:paddingRight="10dp"
+                            android:text="请选择教练"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -171,6 +195,7 @@
                 android:text="查看详情"
                 android:textColor="@color/colorWhite"
                 android:textSize="16sp" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

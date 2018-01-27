@@ -1,6 +1,5 @@
 package com.ms.tjgf.mvp.login;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,48 +7,59 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.ActionBarActivity;
-import com.ms.tjgf.network.RfResultHandler;
-import com.ms.tjgf.network.bean.ProvincesBean;
-import com.ms.tjgf.network.bean.RetrofitHttp;
-
-import java.util.ArrayList;
+import com.ms.tjgf.mvp.login.presenter.ILoginPresenter;
+import com.ms.tjgf.mvp.login.presenter.LoginPresenter;
+import com.ms.tjgf.mvp.login.view.ILoginView;
+import com.ms.tjgf.mvp.pwd.ForgetPwdActivity;
+import com.ms.tjgf.mvp.register.RegisterActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-import rx.Scheduler;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
+
 
 /**
  * Created by MissSekei on 2018/1/12.
  */
 
-public class LoginActivity extends ActionBarActivity {
-
+public class LoginActivity extends ActionBarActivity implements ILoginView {
+    private ILoginPresenter iLoginPresenter;
     @BindView(R.id.username)
     EditText username;
-    @BindView(R.id.userpwd)
-    EditText userpwd;
+    @BindView(R.id.login_code)
+    EditText userCode;
     @BindView(R.id.authcode)
-    TextView authcode;
-    @BindView(R.id.pwd_ll)
-    LinearLayout pwdLl;
+    Button authcode;
     @BindView(R.id.forgetpwd)
     TextView forgetpwd;
     @BindView(R.id.login)
     Button login;
     @BindView(R.id.register)
-    Button register;
-    @BindView(R.id.logo)
-    ImageView logo;
+    TextView register;
+    @BindView(R.id.login_code_pwd)
+    TextView mBtnLoginCodePwd;
+    @BindView(R.id.login_pwd)
+    EditText mLoginPwd;
+    @BindView(R.id.code_ll)
+    LinearLayout mCodell;
+
     Unbinder butterBinder;
-    String name;
-    String pwd;
+
+
+    //修改顶部颜色值
+    @Override
+    protected int getStatusBarTintResource() {
+        return R.color.color_0000;
+    }
+
+    @Override
+    protected int getActionBarType() {
+        return ACTIONBAR_DARK;//表示无顶部栏
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;
@@ -59,57 +69,47 @@ public class LoginActivity extends ActionBarActivity {
     protected void initView() {
         super.initView();
         butterBinder = ButterKnife.bind(this);
+        iLoginPresenter = new LoginPresenter(this, authcode);
     }
 
-    @OnClick({R.id.username, R.id.userpwd, R.id.authcode, R.id.forgetpwd, R.id.login, R.id.register})
+    @OnClick({R.id.username, R.id.authcode, R.id.forgetpwd, R.id.login, R.id.register, R.id.login_code_pwd})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.username:
-                break;
-            case R.id.userpwd:
-                break;
             case R.id.authcode:
+                iLoginPresenter.doCode(username.getText().toString().trim());
                 break;
             case R.id.forgetpwd:
+                startActivity(ForgetPwdActivity.class);
                 break;
             case R.id.login:
-                name = username.getText().toString().trim();
-                pwd = userpwd.getText().toString().trim();
-                getAreaProvinces();
+                String name = username.getText().toString().trim();
+                String pwd = mLoginPwd.getText().toString().trim();
+                String code = userCode.getText().toString().trim();
+                String btnCode = mBtnLoginCodePwd.getText().toString().trim();
+                iLoginPresenter.doLogin(name, code, pwd, btnCode);
                 break;
             case R.id.register:
+                startActivity(RegisterActivity.class);
+                break;
+            case R.id.login_code_pwd:
+                String msg = mBtnLoginCodePwd.getText().toString().trim();
+                if (msg.equals(getResources().getString(R.string.login_pwd))) {
+                    mBtnLoginCodePwd.setText(getResources().getString(R.string.login_code));
+                    mCodell.setVisibility(View.GONE);
+                    mLoginPwd.setVisibility(View.VISIBLE);
+                } else {
+                    mBtnLoginCodePwd.setText(getResources().getString(R.string.login_pwd));
+                    mCodell.setVisibility(View.VISIBLE);
+                    mLoginPwd.setVisibility(View.GONE);
+                }
                 break;
         }
-    }
-
-    public void login(){
-        RetrofitHttp.getInstance().login(name,pwd)
-                .compose(RfResultHandler.handleRespResult())
-                .compose(RfResultHandler.transformer)
-                .subscribe(login ->{
-                    System.out.println(login);
-                },throwable -> {
-                    throwable.printStackTrace();
-                });
-    }
-
-    public void getAreaProvinces(){
-        RetrofitHttp.getInstance().getAreaProvince()
-                .compose(RfResultHandler.handleRespResult())
-                .compose(RfResultHandler.transformer)
-                .subscribe(provinces ->{
-                    System.out.println(provinces.getData().toString());
-//                    ProvincesBean mProvincesBean = new Gson().fromJson(provinces.getData().toString(), ProvincesBean.class);
-//                    mProvincesBean.getProvincesList();
-                    ArrayList<ProvincesBean.Provinces> list = new Gson().fromJson(provinces.getData().toString(), ArrayList.class);
-                },throwable -> {
-                    throwable.printStackTrace();
-                });
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         butterBinder.unbind();
+        iLoginPresenter.onDestroy();
     }
 }

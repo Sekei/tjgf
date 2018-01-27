@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <RadioGroup
         android:id="@+id/pop_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
         android:layout_alignParentBottom="true"
-        android:background="#ffffff"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:background="@drawable/bg_rect_26_3c3c4a"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn_take_photo"
-            android:layout_width="fill_parent"
+        <RadioButton
+            android:id="@+id/radio_imgtext"
+            style="@style/MapRadioGroupStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="拍照"
-            android:textColor="#0e61aa"
-            android:textSize="18sp" />
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/icon_img_text"
+            android:text="图文" />
 
-        <Button
-            android:id="@+id/btn_pick_photo"
-            android:layout_width="fill_parent"
+        <RadioButton
+            android:id="@+id/radio_article"
+            style="@style/MapRadioGroupStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="从相册选择"
-            android:textColor="#0e61aa"
-            android:textSize="18sp" />
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/icon_article"
+            android:text="文章" />
 
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="fill_parent"
+        <RadioButton
+            android:id="@+id/radio_video"
+            style="@style/MapRadioGroupStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dip"
-            android:layout_marginTop="15dip"
-            android:text="取消"
-            android:textColor="#0e61aa"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-</LinearLayout>
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/icon_video"
+            android:text="视频" />
+    </RadioGroup>
+
+</RelativeLayout>

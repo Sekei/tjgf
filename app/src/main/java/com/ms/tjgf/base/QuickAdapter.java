@@ -25,7 +25,7 @@ import static com.ms.tjgf.base.BaseAdapterHelper.get;
 
 
 /**
- * Abstraction class of a BaseAdapter in which you only need
+ * Abstraction class of a BaseViewPagerAdapter in which you only need
  * to provide the convert() implementation.<br/>
  * Using the provided BaseAdapterHelper, your code is minimalist.
  * @param <T> The type of the items in the list.
