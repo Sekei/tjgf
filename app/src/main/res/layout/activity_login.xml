@@ -5,13 +5,21 @@
     android:background="@drawable/login_bg"
     android:orientation="vertical">
 
+    <com.ms.tjgf.mvp.friendinfo.utils.CompatToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/include_black_head" />
+    </com.ms.tjgf.mvp.friendinfo.utils.CompatToolbar>
+
     <EditText
         android:id="@+id/username"
         style="@style/lodin_editext"
         android:layout_height="53dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="100dp"
         android:hint="请输入手机号码"
         android:inputType="phone" />
 

@@ -73,7 +73,7 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     }
 
     @OnClick({R.id.username, R.id.authcode, R.id.forgetpwd, R.id.login, R.id.register, R.id.login_code_pwd})
-    public void onClick(View view) {
+    public void onButterClick(View view) {
         switch (view.getId()) {
             case R.id.authcode:
                 iLoginPresenter.doCode(username.getText().toString().trim());

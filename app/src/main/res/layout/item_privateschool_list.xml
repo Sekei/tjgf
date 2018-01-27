@@ -8,6 +8,7 @@
 
 
     <LinearLayout
+        android:id="@+id/ll_zhaoshi"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:layout_marginLeft="15dp"
@@ -67,6 +68,77 @@
                 android:paddingRight="8dp"
                 android:paddingTop="3dp"
                 android:text="报名" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tricks"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0px"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+            <ImageView
+                android:id="@+id/tricks_image"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/icon_occupy"
+                android:scaleType="center" />
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="21dp">
+
+            <TextView
+                android:id="@+id/tricks_name"
+                style="@style/text_16_EAEAEA" />
+
+            <TextView
+                android:id="@+id/tricks_timer"
+                style="@style/text_12_888888"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/tricks_loaction"
+                style="@style/text_12_888888"
+                android:layout_alignParentBottom="true" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp">
+
+                <TextView
+                    android:id="@+id/tricks_price"
+                    style="@style/text_17_F95251"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    style="@style/text_14_FFFFFF"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_rect_50_f04354"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="3dp"
+                    android:text="报名" />
+            </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
 

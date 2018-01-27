@@ -7,14 +7,15 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/rl_info"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="130dp"
         android:background="@color/color_32323C">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/my_user_img"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:src="@drawable/user_img"
@@ -33,9 +34,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="随波逐流"
+                android:text="太极功夫"
                 android:textColor="@color/colorWhite"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <com.donkingliang.labels.LabelsView
                 android:id="@+id/myuser_labels"

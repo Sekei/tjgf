@@ -2,6 +2,7 @@ package com.ms.tjgf.mvp.curriculum.privateschool;
 
 
 import android.support.annotation.IdRes;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -9,11 +10,8 @@ import android.widget.RadioGroup;
 
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
-import com.ms.tjgf.base.IBaseListPresenter;
-import com.ms.tjgf.bean.DynamicData;
 import com.ms.tjgf.bean.PrivateSchoolData;
 import com.ms.tjgf.mvp.curriculum.privateschool.adapter.PrivateSchoolAdapter;
-import com.ms.tjgf.bean.PrivateSchoolBean;
 import com.ms.tjgf.mvp.curriculum.privateschool.persenter.IPEListPresenter;
 import com.ms.tjgf.mvp.curriculum.privateschool.persenter.PEListPresenter;
 import com.ms.tjgf.mvp.curriculum.privateschool.view.IPEListView;
@@ -33,7 +31,6 @@ public class PrivateSchoolFragment extends BaseFragment implements RadioGroup.On
     private IPEListPresenter iPEListPresenter;
     private RadioGroup mRadioGroup;
 
-
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_privateschool;
@@ -44,7 +41,7 @@ public class PrivateSchoolFragment extends BaseFragment implements RadioGroup.On
         super.initView(view);
         mListView = view.findViewById(R.id.privateschool_list);
         iPEListPresenter = new PEListPresenter(this);
-        //默认首次请求招式
+        //默认首次请求招式Tricks
         iPEListPresenter.requestNewsList(true, "0");
         mPrivateSchoolAdapter = new PrivateSchoolAdapter(getActivity(), R.layout.item_privateschool_list, newsList);
         mListView.setAdapter(mPrivateSchoolAdapter);
@@ -57,9 +54,11 @@ public class PrivateSchoolFragment extends BaseFragment implements RadioGroup.On
     public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
         switch (checkedId) {
             case R.id.radio_btn_zs:
+                mPrivateSchoolAdapter.setStart("0");
                 iPEListPresenter.requestNewsList(true, "0");
                 break;
             case R.id.radio_btn_tl:
+                mPrivateSchoolAdapter.setStart("1");
                 iPEListPresenter.requestNewsList(true, "1");
                 break;
         }

@@ -3,13 +3,16 @@ package com.ms.tjgf.mvp.my;
 
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.RelativeLayout;
 
 import com.donkingliang.labels.LabelsView;
 import com.ms.tjgf.R;
 import com.ms.tjgf.base.BaseFragment;
 import com.ms.tjgf.mvp.login.LoginActivity;
 import com.ms.tjgf.mvp.my.adapter.MyGridAdapter;
+import com.ms.tjgf.mvp.my.collection.MyCollectionActivity;
 import com.ms.tjgf.mvp.my.course.MyCourseActivity;
+import com.ms.tjgf.mvp.my.userinfo.UserInfoActivity;
 import com.ms.tjgf.mvp.tjcircle.video.adapter.VideoListAdapter;
 import com.ms.tjgf.mvp.tjcircle.video.persenter.VideoListPresenter;
 import com.ms.tjgf.widget.CustomGridView;
@@ -23,14 +26,17 @@ import java.util.List;
  */
 
 public class MyFragment extends BaseFragment implements View.OnClickListener, AdapterView.OnItemClickListener {
+    private LabelsView mMyLabels;
+    private CustomGridView mGridView;
+    private MyGridAdapter mMyGridAdapter;
+    private RelativeLayout mRlInfo;//个人信息
+
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_my;
     }
 
-    private LabelsView mMyLabels;
-    private CustomGridView mGridView;
-    private MyGridAdapter mMyGridAdapter;
 
     @Override
     protected void initView(View view) {
@@ -48,6 +54,9 @@ public class MyFragment extends BaseFragment implements View.OnClickListener, Ad
         mList.add("名");
         mList.add("忠");
         mMyLabels.setLabels(mList);
+        //个人信息
+        mRlInfo = view.findViewById(R.id.rl_info);
+        mRlInfo.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +65,8 @@ public class MyFragment extends BaseFragment implements View.OnClickListener, Ad
             startActivity(MyCourseActivity.class);
         } else if (position == 1) {
 
+        } else if (position == 2) {
+            startActivity(MyCollectionActivity.class);
         }
     }
 
@@ -64,6 +75,9 @@ public class MyFragment extends BaseFragment implements View.OnClickListener, Ad
         switch (view.getId()) {
             case R.id.mlogin_btn:
                 startActivity(LoginActivity.class);
+                break;
+            case R.id.rl_info:
+                startActivity(UserInfoActivity.class);
                 break;
         }
     }
