@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_23232A"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_black_head" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_32323C"
+        android:gravity="top|left"
+        android:hint="请输入文字"
+        android:padding="15dp"
+        android:textColor="@color/color_EAEAEA"
+        android:textColorHint="@color/color_888888"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/icon_add_labe" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/text_888888"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_my_position"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="我的位置"
+            android:textSize="14sp" />
+
+        <Switch
+            android:layout_width="60dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            style="@style/text_FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/app_theme_4_bg"
+            android:text="发布"
+            android:textSize="17sp" />
+    </RelativeLayout>
+</LinearLayout>

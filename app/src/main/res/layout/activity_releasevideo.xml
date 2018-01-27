@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_32323C"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_black_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_EAEAEA"
+            android:layout_gravity="center_vertical"
+            android:text="标题名称"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/edittext_rect_4_23232a"
+            android:hint="请输入标题名称"
+            android:paddingLeft="15dp"
+            android:textColor="@color/color_EAEAEA"
+            android:textColorHint="@color/color_888888"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_EAEAEA"
+            android:text="展示视频"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/edittext_rect_4_23232a">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_release_video" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_EAEAEA"
+            android:text="内容文字"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/edittext_rect_4_23232a"
+            android:gravity="top|left"
+            android:hint="请输入标题名称"
+            android:padding="15dp"
+            android:textColor="@color/color_EAEAEA"
+            android:textColorHint="@color/color_888888"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        style="@style/text_FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/app_theme_4_bg"
+        android:text="上传"
+        android:textSize="17sp" />
+
+</LinearLayout>

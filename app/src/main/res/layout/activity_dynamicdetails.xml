@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_32323C"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_black_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:background="@color/color_32323C"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    app:riv_oval="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        style="@style/text_15_EAEAEA" />
+
+                    <TextView
+                        android:id="@+id/created_at"
+                        style="@style/text_12_939393"
+                        android:layout_marginTop="5dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/body"
+                style="@style/text_939393"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="6dp"
+                android:maxLines="5"
+                android:textSize="14sp" />
+
+            <com.ms.tjgf.widget.NineGridTestLayout
+                android:id="@+id/layout_nine_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:visibility="gone"
+                app:sapcing="10dp" />
+
+            <com.donkingliang.labels.LabelsView
+                android:id="@+id/dynamic_labels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="24dp"
+                app:labelBackground="@drawable/friendinfo_label_4_bg"
+                app:labelTextColor="@color/color_939393"
+                app:labelTextPaddingBottom="2dp"
+                app:labelTextPaddingLeft="10dp"
+                app:labelTextPaddingRight="10dp"
+                app:labelTextPaddingTop="2dp"
+                app:labelTextSize="12sp"
+                app:lineMargin="10dp"
+                app:maxSelect="5"
+                app:selectType="SINGLE"
+                app:wordMargin="10dp" />
+
+            <View
+                style="@style/line_1_23232A"
+                android:layout_height="10dp" />
+
+            <TextView
+                style="@style/text_EAEAEA"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="评论"
+                android:textSize="17sp" />
+
+            <com.ms.tjgf.widget.CustomListView
+                android:id="@+id/comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/color_0000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/num_favorite"
+            style="@style/text_EAEAEA"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:drawableLeft="@drawable/icon_dianzan"
+            android:drawablePadding="8dp"
+            android:text="赞"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/num_reply"
+            style="@style/text_EAEAEA"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/icon_liuyan"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="评论"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/num_praise"
+            style="@style/text_EAEAEA"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            android:drawableLeft="@drawable/icon_share"
+            android:drawablePadding="8dp"
+            android:text="转发"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>
