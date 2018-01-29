@@ -10,6 +10,25 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    //签名配置信息
+    signingConfigs {
+        debug {
+            storeFile file("keystore/tjgf.jks")
+            storePassword STORE_PASSWORD
+            keyAlias "tjgf"
+            keyPassword KEY_PASSWORD
+        }
+
+        release {
+            storeFile file("keystore/tjgf.jks")
+            storePassword STORE_PASSWORD
+            keyAlias "tjgf"
+            keyPassword KEY_PASSWORD
+        }
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false
